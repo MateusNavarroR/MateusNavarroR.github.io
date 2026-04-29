@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateus Navarro Ribeiro de Lima — Treinamento em Informática</title>
+  <meta name="description" content="Microempreendedor Individual atuando com treinamento em informática e soluções digitais sob demanda. CNPJ 63.777.936/0001-43." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Mateus Navarro Ribeiro de Lima — Treinamento em Informática" />
+  <meta property="og:description" content="Treinamento em informática e soluções digitais. CNPJ 63.777.936/0001-43." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mateusnavas.me" />
+  <link rel="canonical" href="https://mateusnavas.me" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --bg-elev: #14181d;
+      --bg-card: #181d24;
+      --border: #232a33;
+      --text: #e6e9ee;
+      --text-dim: #9aa3ad;
+      --text-muted: #6b7480;
+      --accent: #7aa2ff;
+      --accent-soft: rgba(122, 162, 255, 0.12);
+      --success: #4ade80;
+      --radius: 14px;
+      --maxw: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(122, 162, 255, 0.08), transparent 60%),
+        radial-gradient(900px 500px at -10% 10%, rgba(122, 162, 255, 0.05), transparent 55%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 120ms ease;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header.top {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header.top .brand {
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 8px var(--success);
+    }
+
+    h1 {
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height: 1.15;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 2vw, 18px);
+      color: var(--text-dim);
+      max-width: 640px;
+      margin: 0;
+    }
+
+    section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    section:first-of-type { border-top: 0; }
+
+    h2 {
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    p { margin: 0 0 16px; color: var(--text-dim); }
+    p:last-child { margin-bottom: 0; }
+
+    .grid-services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .card p { margin: 0; font-size: 14.5px; }
+
+    .info-table {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 16px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .info-row:last-child { border-bottom: 0; }
+
+    .info-row .k {
+      color: var(--text-muted);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .info-row .v {
+      color: var(--text);
+      font-size: 15px;
+      word-break: break-word;
+    }
+
+    .info-row .v.mono {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 14.5px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(74, 222, 128, 0.12);
+      color: var(--success);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .contact-card h3 {
+      color: var(--text-muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .contact-card .value {
+      font-size: 16px;
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13.5px;
+    }
+
+    footer p { color: var(--text-muted); }
+
+    @media (max-width: 640px) {
+      .info-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 14px 18px;
+      }
+      .hero { padding: 48px 0 32px; }
+      section { padding: 36px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="container">
+      <div class="brand">63.777.936/0001-43 &middot; MEI ATIVO</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge"><span class="dot"></span> Microempreendedor Individual ativo</div>
+      <h1>Mateus Navarro Ribeiro de Lima</h1>
+      <p class="subtitle">
+        Treinamento em informática e soluções digitais sob demanda, com atendimento pela internet.
+        Consultoria, capacitação e desenvolvimento de aplicações para profissionais e pequenos negócios.
+      </p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <div class="grid-services">
+        <div class="card">
+          <h3>Treinamentos em informática</h3>
+          <p>Capacitação individual e em grupo em ferramentas digitais, programação, automação e uso aplicado de IA.</p>
+        </div>
+        <div class="card">
+          <h3>Consultoria técnica</h3>
+          <p>Apoio em escolha, configuração e adoção de soluções digitais para rotinas de trabalho e atendimento.</p>
+        </div>
+        <div class="card">
+          <h3>Desenvolvimento sob demanda</h3>
+          <p>Implementação de pequenas aplicações, integrações e fluxos de automação alinhados ao escopo do cliente.</p>
+        </div>
+        <div class="card">
+          <h3>Suporte continuado</h3>
+          <p>Acompanhamento pós-implantação, ajustes, manutenção e revisões periódicas conforme contrato.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="empresa">
+      <h2>Identificação empresarial</h2>
+      <p>Dados públicos extraídos do Certificado da Condição de Microempreendedor Individual (CCMEI) emitido pela Receita Federal do Brasil.</p>
+      <div class="info-table">
+        <div class="info-row">
+          <div class="k">Razão social</div>
+          <div class="v">63.777.936 MATEUS NAVARRO RIBEIRO DE LIMA</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Nome fantasia</div>
+          <div class="v">Mateus Navarro Ribeiro de Lima</div>
+        </div>
+        <div class="info-row">
+          <div class="k">CNPJ</div>
+          <div class="v mono">63.777.936/0001-43</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Natureza jurídica</div>
+          <div class="v">Empresário Individual &middot; Microempreendedor Individual (MEI)</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Situação cadastral</div>
+          <div class="v"><span class="pill">ATIVA</span></div>
+        </div>
+        <div class="info-row">
+          <div class="k">Data de abertura</div>
+          <div class="v">24 de novembro de 2025</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Capital social</div>
+          <div class="v">R$ 10.000,00</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Atividade principal (CNAE)</div>
+          <div class="v">8599-6/03 &middot; Treinamento em informática</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Ocupação principal</div>
+          <div class="v">Instrutor(a) de informática, independente</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Forma de atuação</div>
+          <div class="v">Internet</div>
+        </div>
+        <div class="info-row">
+          <div class="k">Endereço comercial</div>
+          <div class="v">Rua Major Joaquim Henriques, 133 &middot; Torre &middot; João Pessoa &middot; PB &middot; CEP 58040-765</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>E-mail comercial</h3>
+          <div class="value"><a href="mailto:mateusnavarrorl@gmail.com">mateusnavarrorl@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <h3>Telefone comercial</h3>
+          <div class="value"><a href="tel:+5583982600994">+55 (83) 9 8260-0994</a></div>
+        </div>
+        <div class="contact-card">
+          <h3>Endereço</h3>
+          <div class="value">Rua Major Joaquim Henriques, 133<br />Torre &middot; João Pessoa &middot; PB<br />CEP 58040-765</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidade">
+      <h2>Privacidade e atendimento</h2>
+      <p>
+        O atendimento é realizado pela internet, incluindo canais digitais como e-mail, telefone e mensageria.
+        Dados pessoais informados durante o contato são utilizados exclusivamente para a prestação do serviço
+        contratado e tratados conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+      </p>
+      <p>
+        Não há compartilhamento de dados com terceiros sem consentimento, exceto quando necessário para a execução
+        do serviço ou por exigência legal. Solicitações relacionadas aos seus dados podem ser feitas pelo e-mail
+        de contato acima.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        &copy; 2025 Mateus Navarro Ribeiro de Lima &middot; CNPJ 63.777.936/0001-43.
+        Autenticidade do CCMEI em
+        <a href="https://mei.receita.economia.gov.br/certificado" target="_blank" rel="noopener">mei.receita.economia.gov.br/certificado</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
